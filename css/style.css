@@ -73,11 +73,11 @@ section{
     /* right: -100%; */
     bottom: -100%;
     width: 100%;
-    height: 50%;
+    height: 100%;
     background: rgb(19, 19, 19, 0.85); 
     color: white;
     text-align: center;
-    padding: 10px;
+    /* padding: 10px; */
     border-bottom: 2px solid rgb(14, 14, 14);
     border-left: 2px solid rgb(14, 14, 14);
     border-right: 2px solid rgb(14, 14, 14);
@@ -113,6 +113,17 @@ section{
     margin-top: 10px;
 }
 
+.redes{
+    width: 100%;
+}
+.redes img{
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+.redes img:hover{
+    filter: grayscale(100%) brightness(0);
+    transform: scale(1.05); 
+}
+
 
 @media (max-width: 576px) {
     .player-menu {
@@ -142,7 +153,7 @@ section{
     }
 }
 
-@media (min-width: 577px) and (max-width: 768px) {
+@media (min-width: 577px) and (max-width: 992px) {
     .player-menu {
         bottom: -100%;
         width: 100%;
@@ -268,7 +279,7 @@ section{
 
 .campeonato .col-3,
 .campeonato .col-sm-2 {
-    max-width: 15%; /* Aumenta o tamanho da imagem do campeonato */
+    max-width: 15%; 
 }
 
 .infospartida p {
@@ -289,20 +300,150 @@ section{
 
 /* VIDEOS */
 
-.video-thumbnails{
+.video-thumbnails {
     font-family: "Kanit", sans-serif;
     color: white;
-    background-image: linear-gradient(black,rgb(16, 16, 16),rgb(16, 16, 16),rgb(16, 16, 16));
+    background-image: linear-gradient(black, rgb(16, 16, 16), rgb(16, 16, 16), rgb(16, 16, 16));
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding não cause estouro da largura */
+}
+
+/* Div que contém as thumbnails com largura limitada */
+.thumbnails-container {
+    max-width: 1200px; /* Define a largura máxima */
+    margin: 0 auto; /* Centraliza a div na página */
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+    grid-template-areas: 
+        "large large large small1"
+        "large large large small2"
+        "large large large small3"
+        "medium1 medium1 medium2 medium2"
+        "medium1 medium1 medium2 medium2"
+    ;
+}
+
+.large-thumb {
+    grid-row: span 2;
+    grid-area: large;
+}
+
+.small-thumb1 {   
+    grid-area: small1;
+}
+.small-thumb2 {   
+    grid-area: small2;
+}
+.small-thumb3 {   
+    grid-area: small3;
+}
+
+.medium-thumb1{
+    grid-area: medium1;
+}
+.medium-thumb2{
+    grid-area: medium2;
 }
 
 .thumb-img {
+    width: 100%;
     border-radius: 10px;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  }
+}
 
 .thumb-img:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-  }
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Cada imagem ocupa 1 coluna */
+        grid-template-areas: 
+            "large"
+            "small1"
+            "small2"
+            "small3"
+            "medium1"
+            "medium2";
+    }
+
+    .large-thumb {
+        grid-row: auto; /* Permite que a grande thumb ocupe uma linha inteira */
+        grid-column: span 1; /* Garante que ocupe toda a coluna */
+    }
+
+    .small-thumb1, .small-thumb2, .small-thumb3, .medium-thumb1, .medium-thumb2 {
+        grid-column: span 1; /* Cada thumbnail ocupa 1 coluna */
+        grid-row: auto; /* Permite que as pequenas thumbs também se ajustem */
+    }
+}
+
+
 
 /* VIDEOS */
+
+/* COMUNIDADE */
+
+.comunidade-section {
+    padding: 60px 20px; /* Aumenta a altura da seção */
+    font-family: "Kanit", sans-serif;
+    color: white;
+    background-image: linear-gradient(rgb(16,16,16), black);
+    text-align: center;
+    min-height: 400px; /* Define uma altura mínima para garantir que o conteúdo esteja bem centralizado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.comunidade-paragrafo {
+    font-size: 1.25rem; /* Aumenta o tamanho da fonte do parágrafo */
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza o parágrafo */
+}
+
+.comunidade-botao {
+    padding: 12px 24px; /* Aumenta o tamanho do botão */
+    font-size: 1.2rem; /* Aumenta a fonte do botão */
+}
+
+
+/* COMUNIDADE */
+
+/* FOOTER */
+
+.footer {
+    background-color: #000000; /* Fundo preto */
+    padding: 20px 0;
+    font-family: "Kanit", sans-serif;
+}
+
+.footer-social-icons a {
+    font-size: 1.5rem; /* Tamanho dos ícones das redes sociais */
+    margin-right: 0.5rem; /* Espaçamento leve entre os ícones */
+}
+
+.footer-social-icons a:hover {
+    text-decoration: none; /* Remove o sublinhado dos links ao passar o mouse */
+}
+
+.text-left {
+    flex: 1; /* Garante que o texto dos direitos autorais fique alinhado à esquerda */
+}
+
+
+
+
+
+
+
+
+
+
