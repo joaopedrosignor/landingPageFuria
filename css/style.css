@@ -1,0 +1,308 @@
+
+.navbar{
+    background: #000;
+}
+.nav-custom {
+    color: #ffffff !important;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.nav-custom:hover {
+    color: lightgray !important; 
+}
+
+.nav-item {
+    margin-right: 20px; 
+}
+
+/* NAV */
+
+.cs2{
+    background: rgb(16, 16, 16);
+    color:white;
+    font-family: "Kanit", sans-serif;
+}
+.cs2 h1{
+    font-weight: 500;
+}
+
+
+
+section{
+    background: rgb(16, 16, 16);
+    color: white;
+}
+
+/* LINEUP */
+.lineup{
+    /* background-image: radial-gradient(rgb(16, 16, 16),rgb(16, 16, 16),rgb(19, 19, 19), black, black); */
+    background-image: linear-gradient(black,rgb(16, 16, 16),rgb(16, 16, 16),black);
+    /* background-color: rgb(192,192,192); */
+}
+.lineup h1{
+    font-weight: 500;
+    font-family: "Kanit", sans-serif;
+    color: white;
+}
+
+.player-hover {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.frame {
+    padding-bottom: 0; /* Espaço entre a imagem e a moldura */
+    border: 2px solid rgb(14, 14, 14); /* Cor da moldura do quadro */
+    border-radius: 5px; 
+    /* background-color: rgb(19, 19, 19); */
+    background-image: radial-gradient(rgb(16, 16, 16),rgb(19, 19, 19), black);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
+    display: inline-block;
+}
+
+.player-img {
+    transition: opacity 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+    border-radius: 5px; /* Bordas arredondadas na imagem para acompanhar a moldura */
+}
+
+.player-menu {
+    position: absolute;
+    /* right: -100%; */
+    bottom: -100%;
+    width: 100%;
+    height: 50%;
+    background: rgb(19, 19, 19, 0.85); 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 2px solid rgb(14, 14, 14);
+    border-left: 2px solid rgb(14, 14, 14);
+    border-right: 2px solid rgb(14, 14, 14);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: bottom 0.3s ease-in-out; 
+    font-family: "Noto Sans", sans-serif;
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,  
+        -1px 1px 0 #000,  
+        1px 1px 0 #000;
+}
+
+.player-hover:hover .player-menu {
+    bottom: 0;
+}
+
+.player-name {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.player-info {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.flag-img {
+    width: 30px;
+    height: auto;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 576px) {
+    .player-menu {
+        bottom: -100%;
+        width: 100%;
+        height: 100%; 
+        font-size: 12px; /* Reduz o tamanho da fonte */
+        padding: 5px; /* Reduz o padding */
+        
+    }
+
+    .player-hover:hover .player-menu {
+        bottom: 0;
+    }
+
+    .player-name {
+        font-size: 16px; /* Ajusta o tamanho da fonte do nome do jogador */
+    }
+
+    .player-info {
+        font-size: 12px; /* Ajusta o tamanho da fonte da info do jogador */
+    }
+
+    .flag-img {
+        width: 20px; /* Reduz o tamanho da imagem da bandeira */
+        margin-top: 5px; /* Reduz o espaçamento superior */
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .player-menu {
+        bottom: -100%;
+        width: 100%;
+        height: 100%; /* Ajusta a altura para dispositivos médios */
+        font-size: 14px;
+        padding: 7px;
+        
+    }
+
+    .player-hover:hover .player-menu {
+        bottom: 0;
+    }
+
+    .player-name {
+        font-size: 17px; /* Ajusta o tamanho da fonte do nome do jogador */
+    }
+
+    .player-info {
+        font-size: 13px; /* Ajusta o tamanho da fonte da info do jogador */
+    }
+
+    .flag-img {
+        width: 25px; /* Ajusta o tamanho da imagem da bandeira */
+        margin-top: 7px; /* Ajusta o espaçamento superior */
+    }
+}
+
+/* LINEUP */
+
+/* COMPROMISSO */
+.proximoCompromisso{
+    background-image: linear-gradient(black,rgb(16, 16, 16));
+    font-family: "Kanit", sans-serif;
+}
+.compromisso {
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* background-image: radial-gradient(rgb(16, 16, 16),rgb(19, 19, 19), black); */
+    max-width: 800px; /* Limita a largura máxima para evitar que a div seja muito larga em telas grandes */
+    width: 100%; /* Garante que a div ocupe toda a largura disponível */
+    /* background-image: linear-gradient(rgb(16, 16, 16),black); */
+}
+
+.compromisso-link {
+    text-decoration: none;
+    display: block;
+    color: white; /* Define o texto branco */
+}
+
+.compromisso-link:hover {
+    text-decoration: none; /* Remove sublinhado ao passar o mouse */
+}
+
+.compromisso-link:hover .compromisso {
+    background-color: rgba(0, 0, 0, 0.1); /* Clarear a cor de fundo */
+    transform: scale(1.02); /* Efeito de aumento */
+}
+
+.campeonato img{
+    border-radius: 50%;
+}
+.campeonato img,
+.partida img {
+    max-width: 100%;
+    height: auto;
+}
+
+.infospartida p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .partida {
+        flex-direction: column;
+    }
+
+    .partida .col-4 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* COMPROMISSO */
+
+/* RESULTADOS */
+
+.ultimosResultados{
+    font-family: "Kanit", sans-serif;
+    color: white;
+    background-image: linear-gradient(rgb(16, 16, 16),rgb(19, 19, 19), black);
+
+}
+
+.resultado {
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    max-width: 800px; /* Limita a largura máxima */
+    width: 100%; /* Garante que a div ocupe toda a largura disponível */
+    background-image: radial-gradient(rgb(16, 16, 16),rgb(19, 19, 19), black);
+}
+
+.resultado-link {
+    text-decoration: none;
+    display: block;
+    color: white; /* Define o texto branco */
+}
+
+.resultado-link:hover {
+    text-decoration: none; /* Remove sublinhado ao passar o mouse */
+}
+
+.resultado-link:hover .resultado {
+    background-color: rgba(0, 0, 0, 0.1); /* Clarear a cor de fundo */
+    transform: scale(1.02); /* Efeito de aumento */
+}
+
+.campeonato img,
+.partida img {
+    max-width: 100%;
+    height: auto;
+}
+
+.campeonato .col-3,
+.campeonato .col-sm-2 {
+    max-width: 15%; /* Aumenta o tamanho da imagem do campeonato */
+}
+
+.infospartida p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .partida {
+        flex-direction: column;
+    }
+
+    .partida .col-4 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* RESULTADOS */
+
+/* VIDEOS */
+
+.video-thumbnails{
+    font-family: "Kanit", sans-serif;
+    color: white;
+    background-image: linear-gradient(black,rgb(16, 16, 16),rgb(16, 16, 16),rgb(16, 16, 16));
+}
+
+.thumb-img {
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+.thumb-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  }
+
+/* VIDEOS */
