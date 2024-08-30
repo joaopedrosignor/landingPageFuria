@@ -414,6 +414,22 @@ section{
     font-size: 1.2rem; /* Aumenta a fonte do botão */
 }
 
+@media (max-width: 768px) {
+    .comunidade-section h1 {
+        font-size: 2.5rem; /* Ajuste o tamanho da fonte conforme necessário */
+        margin-bottom: 20px; /* Ajuste a margem inferior conforme necessário */
+    }
+
+    .comunidade-paragrafo {
+        font-size: 1rem; /* Ajuste o tamanho da fonte do parágrafo se necessário */
+    }
+
+    .comunidade-botao {
+        font-size: 1rem; /* Ajuste o tamanho da fonte do botão se necessário */
+        padding: 10px 20px; /* Ajuste o padding do botão se necessário */
+    }
+}
+
 
 /* COMUNIDADE */
 
@@ -437,7 +453,6 @@ section{
 .text-left {
     flex: 1; /* Garante que o texto dos direitos autorais fique alinhado à esquerda */
 }
-
 
 
 
